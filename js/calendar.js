@@ -50,11 +50,10 @@ var initializeCalendar = function () {
             });
         },
         eventRender: function (event, element) {
-            console.log(event);
             if (event.editable !== null && event.editable === false) {
                 element.find(".fc-time").prepend("<i class='fas fa-lock'></i>");
-                element.find('.fc-title').append("<br/>" + "<span class='description'>" + event.description + "</span>");
             }
+            element.find('.fc-title').append("<br/>" + "<span class='description'>" + event.description + "</span>");
         },
         defaultTimedEventDuration: '00:30:00',
         forceEventDuration: true,
